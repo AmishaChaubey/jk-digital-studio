@@ -77,6 +77,11 @@ export default function ContactPage() {
       answer:
         "We recommend booking as early as possible, especially for weddings and peak seasons.A 3–6 month advance booking ensures availability and ample time for detailed planning to deliver the best result",
     },
+    {
+      question: "What locations do you serve for photography services?",
+      answer:
+        "We provide photography services across nearby cities and travel to different locations based on client requirements. Additional travel charges  apply for outstation events.",
+    },
   ];
 
   const handleInputChange = (e) =>
