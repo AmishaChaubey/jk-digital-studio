@@ -1,16 +1,28 @@
 import React from "react";
-import { Camera, Users, Award, Star } from "lucide-react";
+import {
+  Camera,
+  Clock,
+  Users,
+  CheckCircle,
+  Award,
+  Star,
+  MapPin,
+} from "lucide-react";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated, useSprings } from "@react-spring/web";
 
 const Stats = () => {
   const stats = [
-    { icon: Camera, value: 5000, label: "Photos Captured" },
-    { icon: Users, value: 1200, label: "Happy Clients" },
-    { icon: Award, value: 50, label: "Awards Won" },
-    { icon: Star, value: 4.9, label: "Average Rating" },
+    { icon: Clock, value: 10, suffix: "+", label: "Year Experience" },
+    {
+      icon: CheckCircle,
+      value: 1150,
+      suffix: "+",
+      label: "Projects Delivered",
+    },
+    { icon: MapPin, value: 50, suffix: "+", label: "Cities" },
+    { icon: Star, value: 99, suffix: "%", label: "Customer Satisfaction" },
   ];
-
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -29,7 +41,7 @@ const Stats = () => {
       },
       delay: i * 120,
       config: { tension: 280, friction: 22 },
-    }))
+    })),
   );
 
   const numberSprings = stats.map((stat) =>
@@ -38,7 +50,7 @@ const Stats = () => {
       to: { number: inView ? stat.value : 0 },
       delay: 400 + stats.indexOf(stat) * 180,
       config: { mass: 1, tension: 180, friction: 14 },
-    })
+    }),
   );
 
   const iconSprings = useSprings(
@@ -51,7 +63,7 @@ const Stats = () => {
       },
       delay: 250 + i * 100,
       config: { tension: 300, friction: 12 },
-    }))
+    })),
   );
 
   return (
@@ -63,12 +75,13 @@ const Stats = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
         {/* Section heading */}
         <div className="text-center mb-14">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-8 h-0.5 bg-red-600"></div>
-            <p className="text-red-600 text-xs font-bold uppercase tracking-[0.2em]">By the numbers</p>
+            <p className="text-red-600 text-xs font-bold uppercase tracking-[0.2em]">
+              By the numbers
+            </p>
             <div className="w-8 h-0.5 bg-red-600"></div>
           </div>
           <h2
@@ -76,7 +89,10 @@ const Stats = () => {
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Our{" "}
-            <span className="text-red-600" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <span
+              className="text-red-600"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
               Achievements
             </span>
           </h2>
@@ -93,12 +109,14 @@ const Stats = () => {
                 className="group relative"
               >
                 <div className="relative bg-white border border-gray-100 hover:border-red-200 rounded-2xl p-6 sm:p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-red-100 overflow-hidden">
-
                   {/* Top accent bar */}
                   <div className="absolute top-0 left-0 w-full h-1 bg-red-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-t-2xl"></div>
 
                   {/* Icon */}
-                  <animated.div style={iconSprings[index]} className="inline-block mb-5">
+                  <animated.div
+                    style={iconSprings[index]}
+                    className="inline-block mb-5"
+                  >
                     <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto bg-red-50 group-hover:bg-red-600 rounded-2xl flex items-center justify-center transition-all duration-300">
                       <StatIcon className="w-7 h-7 sm:w-8 sm:h-8 text-red-600 group-hover:text-white transition-colors duration-300" />
                     </div>
@@ -111,7 +129,7 @@ const Stats = () => {
                   >
                     <animated.span>
                       {numberSprings[index].number.to((n) =>
-                        stat.value % 1 !== 0 ? n.toFixed(1) : Math.floor(n)
+                        stat.value % 1 !== 0 ? n.toFixed(1) : Math.floor(n),
                       )}
                     </animated.span>
                     {stat.value % 1 === 0 ? "+" : ""}

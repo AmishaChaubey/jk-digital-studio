@@ -111,7 +111,7 @@ const CTA = () => {
             <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
               <Camera className="w-4 h-4 text-white" />
             </div>
-            <span className="text-white text-xs font-semibold hidden sm:block">Kanchan Studio</span>
+            <span className="text-white text-xs font-semibold hidden sm:block">JK Digital Photo Studio</span>
           </div>
 
         </div>

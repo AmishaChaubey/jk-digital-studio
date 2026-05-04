@@ -491,7 +491,7 @@ const Navbar = () => {
               <div className="absolute top-0 right-0 w-28 h-28 rounded-full bg-rose-500/20 blur-2xl pointer-events-none" />
               <div className="absolute inset-0 flex items-center px-5 sm:px-6">
                 <div>
-                  <p className="text-red-300 text-[9px] tracking-[0.2em] uppercase font-bold mb-0.5">Kanchan Photo Studio</p>
+                  <p className="text-red-300 text-[9px] tracking-[0.2em] uppercase font-bold mb-0.5">JK Digital Photo Studio</p>
                   <h2 className="text-white text-xl sm:text-2xl font-bold" style={{ fontFamily: 'Georgia, serif' }}>
                     Book Your Session
                   </h2>

@@ -68,14 +68,7 @@ const ServicesSection = () => {
       link: "/services/prewedding-shoot",
       tag: "Trending",
     },
-    {
-      id: 9,
-      title: "Photo Framing",
-      description: "Gentle and artistic portraits of your newest family member",
-      image: "/frames/frame1.jpeg",
-      link: "/services/photo-framing",
-      tag: null,
-    },
+  
     {
       id: 10,
       title: "Product Photography",
@@ -84,30 +77,9 @@ const ServicesSection = () => {
       link: "/services/product-photography",
       tag: null,
     },
-    {
-      id: 11,
-      title: "PVC Card",
-      description: "Premium PVC cards that make your brand truly shine",
-      image: "/pvc-img/pvc1.jpg",
-      link: "/services/pvc-cards",
-      tag: null,
-    },
-    {
-      id: 12,
-      title: "Photo Printout",
-      description: "High-quality photo printouts that make memories come alive.",
-      image: "/printout-img/printout2.jpg",
-      link: "/services/photo-printing",
-      tag: null,
-    },
-    {
-      id: 13,
-      title: "Visa & Passport Photo",
-      description: "Professional photos capturing your identity clearly.",
-      image: "/visa-passport/visa2.jpg",
-      link: "/services/visa-passport",
-      tag: null,
-    },
+ 
+ 
+
   ];
 
   const [current, setCurrent] = useState(0);

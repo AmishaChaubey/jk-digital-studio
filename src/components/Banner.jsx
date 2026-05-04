@@ -18,7 +18,7 @@ const Banner = () => {
       image: "/banner/banner3.jpg",
       title: "Every Moment",
       titleAccent: "Beautifully Captured.",
-      subtitle: "Professional photography that turns memories into masterpieces",
+      subtitle: "Professional photography services that transform your special moments into timeless memories.",
     },
   ];
 
@@ -148,7 +148,7 @@ const Banner = () => {
           <div className="txt-1 inline-flex items-center gap-2 mb-4 sm:mb-5">
             <div className="dot-pulse w-1.5 h-1.5 rounded-full bg-red-500" />
             <span className="font-inter text-[10px] sm:text-xs tracking-[0.25em] text-red-400 font-semibold uppercase">
-              Kanchan Photo Studio
+              JK Digital Photo Studio
             </span>
           </div>
 

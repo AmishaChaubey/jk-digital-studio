@@ -1,5 +1,5 @@
-import React from 'react';
-import { Camera, Sparkles, Award } from 'lucide-react';
+import React from "react";
+import { Camera, Sparkles, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Welcome = () => {
@@ -14,7 +14,6 @@ const Welcome = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
-
           {/* Image - shown first on mobile */}
           <div className="relative order-1 md:order-2 animate-fade-in-right">
             {/* Decorative border frame */}
@@ -31,8 +30,12 @@ const Welcome = () => {
                   <Camera className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500 leading-none mb-0.5">Experience</p>
-                  <p className="text-sm font-bold text-gray-900 leading-none">10+ Years</p>
+                  <p className="text-xs text-gray-500 leading-none mb-0.5">
+                    Experience
+                  </p>
+                  <p className="text-sm font-bold text-gray-900 leading-none">
+                    10+ Years
+                  </p>
                 </div>
               </div>
             </div>
@@ -40,11 +43,12 @@ const Welcome = () => {
 
           {/* Text Content */}
           <div className="order-2 md:order-1 space-y-7 animate-fade-in">
-
             {/* Label */}
             <div className="flex items-center gap-3">
               <div className="w-8 h-0.5 bg-red-600"></div>
-              <p className="text-red-600 text-xs font-bold uppercase tracking-[0.2em]">Welcome</p>
+              <p className="text-red-600 text-xs font-bold uppercase tracking-[0.2em]">
+                Welcome
+              </p>
             </div>
 
             {/* Heading */}
@@ -61,17 +65,19 @@ const Welcome = () => {
             {/* Description */}
             <div className="space-y-3">
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-               Life is a collection of fleeting moments — a laugh shared, a glance exchanged, a tear shed, a promise made. At JK Digital Photo Studio, we don’t just capture images — we capture emotions, memories, and stories that last forever.
+                {/* Life is a collection of fleeting moments — a laugh shared, a glance exchanged, a tear shed, a promise made. At JK Digital Photo Studio, we don’t just capture images — we capture emotions, memories, and stories that last forever.
 
-We specialize in wedding photography, pre-wedding shoots, newborn baby photography, corporate events, and professional photoshoots. From the first heartbeat of a newborn to the joy of weddings and special occasions, our experienced photographers turn your precious moments into timeless art.
-
-
+              We specialize in wedding photography, pre-wedding shoots, newborn baby photography, corporate events, and professional photoshoots. From the first heartbeat of a newborn to the joy of weddings and special occasions, our experienced photographers turn your precious moments into timeless art. */}
+                Life is a collection of beautiful moments — a laugh, a glance, a
+                promise. At JK Digital Photo Studio, we capture emotions,
+                memories, and stories that last forever. We offer professional
+                wedding, pre-wedding, baby, and event photography in Noida,
+                delivering high-quality and creative services.
               </p>
               <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
-               If you are looking for a professional photography studio in Noida, JK Digital Photo Studio is your trusted choice for high-quality, creative, and affordable photography services.
-
-Book your session today and let us turn your memories into masterpieces.
-
+                
+                Book your session today and let us transform your memories into
+                lasting masterpieces.
               </p>
             </div>
 
@@ -81,9 +87,21 @@ Book your session today and let us turn your memories into masterpieces.
             {/* Features */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
-                { icon: Camera, title: "Pro Equipment", desc: "Latest tech & tools" },
-                { icon: Award, title: "Expert Team", desc: "Seasoned professionals" },
-                { icon: Sparkles, title: "Creative Vision", desc: "Unique perspectives" },
+                {
+                  icon: Camera,
+                  title: "Pro Equipment",
+                  desc: "Latest tech & tools",
+                },
+                {
+                  icon: Award,
+                  title: "Expert Team",
+                  desc: "Seasoned professionals",
+                },
+                {
+                  icon: Sparkles,
+                  title: "Creative Vision",
+                  desc: "Unique perspectives",
+                },
               ].map(({ icon: Icon, title, desc }) => (
                 <div
                   key={title}
@@ -93,7 +111,9 @@ Book your session today and let us turn your memories into masterpieces.
                     <Icon className="w-5 h-5 text-red-600 group-hover:text-white transition-colors duration-300" />
                   </div>
                   <div>
-                    <h3 className="text-gray-900 font-semibold text-sm">{title}</h3>
+                    <h3 className="text-gray-900 font-semibold text-sm">
+                      {title}
+                    </h3>
                     <p className="text-gray-500 text-xs mt-0.5">{desc}</p>
                   </div>
                 </div>
@@ -113,7 +133,6 @@ Book your session today and let us turn your memories into masterpieces.
                 </button>
               </Link>
             </div>
-
           </div>
         </div>
       </div>

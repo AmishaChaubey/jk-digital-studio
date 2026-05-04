@@ -1,5 +1,14 @@
 import React, { useEffect } from "react";
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Camera, Heart } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  Mail,
+  Phone,
+  MapPin,
+  Camera,
+  Heart,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -9,16 +18,17 @@ const Footer = () => {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "Portfolio", path: "/portfolio" },
+    { name: "Gallery", path: "/gallery" },
     { name: "Contact", path: "/contact" },
   ];
 
   const serviceLinks = [
-    { name: "Photo Framing", path: "/services/photo-framing" },
-    { name: "Event Coverage", path: "/services/event-photography" },
-    { name: "Maternity Shoot", path: "/services/maternity-shoot" },
-    { name: "Outdoor Photography", path: "/services/outdoor-photography" },
+    { name: "Birthday Photography", path: "/services/birthday-shoot" },
     { name: "Wedding Photography", path: "/services/wedding-photography" },
+    { name: "Live Photography", path: "/services/live-event-photography" },
+    { name: "Maternity Photography", path: "/services/maternity-shoot" },
+    { name: "Drone Photography", path: "/services/wedding-photography" },
+    { name: "Event Photography", path: "/services/wedding-photography" },
   ];
 
   const socials = [
@@ -65,35 +75,36 @@ const Footer = () => {
       <div className="h-px w-full bg-gradient-to-r from-transparent via-red-700 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-14 pb-8">
-
         {/* ── Main Grid ── */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 mb-12">
-
           {/* Brand col — wider */}
           <div className="lg:col-span-4 flex flex-col items-start gap-5">
             {/* Logo + name */}
             <div className="flex items-center gap-3">
-         
               <div>
-                <p className="text-white font-bold text-lg leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
-                  Kanchan
+                <p
+                  className="text-white font-bold text-lg leading-tight"
+                  style={{ fontFamily: "Georgia, serif" }}
+                >
+                  JK
                 </p>
                 <p className="text-red-400 text-xs tracking-widest uppercase font-medium">
-                  Photo Studio
+                  Digital Studio
                 </p>
               </div>
             </div>
 
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Capturing moments that last a lifetime. Professional photography
-              services for every occasion — from weddings to milestones.
+              JK Digital Photo Studio – Professional wedding, baby & event
+              photography in Noida, capturing emotions and turning moments into
+              timeless memories.
             </p>
 
             {/* Social icons */}
             <div className="flex gap-3 mt-1">
               {socials.map(({ Icon, label, href }) => (
-                
-              <a    key={label}
+                <a
+                  key={label}
                   href={href}
                   aria-label={label}
                   className="w-9 h-9 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center text-gray-400 hover:text-white hover:bg-red-800 hover:border-red-700 transition-all duration-300 hover:scale-110"
@@ -151,13 +162,12 @@ const Footer = () => {
               Contact
             </h4>
             <div className="space-y-4">
-
               <div className="flex gap-3 items-start group">
                 <div className="w-8 h-8 rounded-lg bg-red-900/20 border border-red-900/30 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-red-800/30 transition-colors">
                   <MapPin size={14} className="text-red-400" />
                 </div>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  Gate No-4, Parmukh Market, Shop-3, Bisrakh Rd, Greater Noida, UP 201306
+                  Nav durga Mandir, Nirala Greenshire, Sector 2, Noida, UP
                 </p>
               </div>
 
@@ -165,8 +175,11 @@ const Footer = () => {
                 <div className="w-8 h-8 rounded-lg bg-red-900/20 border border-red-900/30 flex items-center justify-center flex-shrink-0 group-hover:bg-red-800/30 transition-colors">
                   <Phone size={14} className="text-red-400" />
                 </div>
-                <a href="tel:9958138641" className="text-gray-400 hover:text-white text-sm transition-colors">
-                  +91 9958138641
+                <a
+                  href="tel:9990607660"
+                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                >
+                  +91 9990607660, 9990607650
                 </a>
               </div>
 
@@ -175,13 +188,12 @@ const Footer = () => {
                   <Mail size={14} className="text-red-400" />
                 </div>
                 <a
-                  href="mailto:Kpstudioandphotoframing@gmail.com"
+                  href="mailto:jaikaran326@gmail.com"
                   className="text-gray-400 hover:text-white text-sm transition-colors break-all"
                 >
-                  Kpstudioandphotoframing@gmail.com
+                  jaikaran326@gmail.com
                 </a>
               </div>
-
             </div>
           </div>
         </div>
@@ -193,10 +205,15 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-gray-500 text-xs flex items-center gap-1.5">
             <Camera size={12} className="text-red-700" />
-            &copy; {currentYear} <span className="text-gray-300 font-medium mx-1">Kanchan PhotoStudio</span> — All rights reserved.
+            &copy; {currentYear}{" "}
+            <span className="text-gray-300 font-medium mx-1">
+              JK Digital Photo Studio
+            </span>{" "}
+            — All rights reserved.
           </p>
           <p className="text-gray-600 text-xs flex items-center gap-1">
-            Made with <Heart size={11} className="text-red-700 fill-red-700 mx-0.5" /> by{" "}
+            Made with{" "}
+            <Heart size={11} className="text-red-700 fill-red-700 mx-0.5" /> by{" "}
             <a
               href="https://deboxtechnology.com/"
               target="_blank"
@@ -207,9 +224,7 @@ const Footer = () => {
             </a>
           </p>
         </div>
-
       </div>
-    
     </footer>
   );
 };
