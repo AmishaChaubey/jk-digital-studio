@@ -88,6 +88,7 @@ const Navbar = () => {
     { name: "Live Event Shoot", path: "/services/live-event-photography" },
     { name: "Wedding Event Shoot", path: "/services/event-photography" },
     { name: "Portrait Shoot", path: "/services/portrait-shoot" },
+     { name: "Model Shoot", path: "/services/model-shoot" },
     { name: "Product Shoot", path: "/services/product-photography" },
     { name: "Maternity Shoot", path: "/services/maternity-shoot" },
     { name: "Wedding Shoot", path: "/services/wedding-photography" },

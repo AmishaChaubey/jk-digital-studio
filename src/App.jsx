@@ -37,6 +37,7 @@ import Portrait from "./components/service/Portrait-shoot/Portrait";
 //import VisaPassport from './components/service/visa-passport/VisaPhoto';
 import Birthday from './components/service/birthday-shoot/Birthday';
 import IndoorShoot from './components/service/indoor-shoot/Indoor'
+import ModelShoot from './components/service/model-shoot/model-shoot'
 
 // Gallery Component
 import PhotoStudioWebsite from "./components/gallery/Gallery";
@@ -93,13 +94,13 @@ const App = () => {
          <Route path="/services/live-event-photography" element={<LiveEventPhotograpghy/>} />
         <Route path="/services/product-photography" element={<ProductPhotography />} />
         <Route path="/services/outdoor-photography" element={<OutdoorPhotography />} />
-               {/* <Route path="/services/food-photography" element={<FoodPhotography />} /> */}
+          
         <Route path="/services/maternity-shoot" element={<MaternityShoot />} />
         <Route path="/services/portrait-shoot" element={<Portrait />} />
-        {/* <Route path="/services/photo-framing" element={<PhotoFraming />} /> */}
+    
         <Route path="/services/wedding-cinemo" element={<WeddingCinemo />} />
-         {/* <Route path="/services/pvc-cards" element={<PvcCard/>} /> */}
-            {/* <Route path="/services/photo-printing" element={<Printout/>} /> */}
+
+      <Route path="/services/model-shoot" element={<ModelShoot/>}/>
              
 
                         {/* <Route path="/services/visa-passport" element={<VisaPassport/>} /> */}

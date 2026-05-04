@@ -8,14 +8,14 @@ const PhotoStudioWebsite = () => {
   const [lightboxImg, setLightboxImg] = useState(null);
 
   const categories = [
-    { id: "wedding", title: "Wedding Photography", coverImage: "/wedd-img/wedding3.jfif", count: "Premium" },
-    { id: "prewedding", title: "Pre-Wedding Photography", coverImage: "pre-wedd/pre-wedd1.jpeg", count: "Romantic" },
+    { id: "wedding", title: "Wedding Photography", coverImage: "/wedding/w1.jpg", count: "Premium" },
+    { id: "prewedding", title: "Pre-Wedding Photography", coverImage: "pre/p1.jpg", count: "Romantic" },
     { id: "portrait", title: "Portrait Studio", coverImage: "pot-img/port8.jpg", count: "Artistic" },
-    { id: "babyshoot", title: "Baby Shoot", coverImage: "/baby-img/baby22.jpg", count: "Adorable" },
+    { id: "babyshoot", title: "Baby Shoot", coverImage: "/baby-img/baby3.jpg", count: "Adorable" },
     { id: "birthday", title: "Birthday Photography", coverImage: "/birthday-img/birthday10.jfif", count: "Joyful" },
-    { id: "maternity", title: "Maternity Shoot", coverImage: "/maternity-img/mat1.jpg", count: "Beautiful" },
-    { id: "corporate", title: "Corporate Photography", coverImage: "/corporate-img/corp1.jpg", count: "Professional" },
-    { id: "fashion", title: "Fashion Photography", coverImage: "/fashion-img/fash1.jpg", count: "Editorial" },
+    { id: "maternity", title: "Maternity Shoot", coverImage: "/maternity-img/maternity2.jpeg", count: "Beautiful" },
+    { id: "event", title: "Event Photography", coverImage: "/even/live1.jfif", count: "Professional" },
+    { id: "model", title: "Model Shoot", coverImage: "/model/md19.jpg", count: "Editorial" },
   ];
 
   useEffect(() => window.scrollTo(0, 0), []);
