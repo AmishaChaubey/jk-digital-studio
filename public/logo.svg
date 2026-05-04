@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 467.54 253.84">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke: #231f20;
+      }
+
+      .cls-1, .cls-3, .cls-6 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-7 {
+        letter-spacing: .05em;
+      }
+
+      .cls-8 {
+        font-size: 58.62px;
+      }
+
+      .cls-8, .cls-9 {
+        font-family: Salks, Salks;
+      }
+
+      .cls-8, .cls-9, .cls-10 {
+        fill: #231f20;
+      }
+
+      .cls-11 {
+        letter-spacing: .06em;
+      }
+
+      .cls-2 {
+        stroke: #9c0a0e;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-width: 5px;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-linecap: round;
+      }
+
+      .cls-2, .cls-4, .cls-5 {
+        stroke-linejoin: round;
+      }
+
+      .cls-12 {
+        letter-spacing: 0em;
+      }
+
+      .cls-9 {
+        font-size: 20px;
+      }
+
+      .cls-13 {
+        letter-spacing: .14em;
+      }
+
+      .cls-14 {
+        letter-spacing: .05em;
+      }
+
+      .cls-4, .cls-6 {
+        stroke-width: 2px;
+      }
+
+      .cls-10 {
+        stroke-width: 0px;
+      }
+
+      .cls-15 {
+        letter-spacing: .14em;
+      }
+
+      .cls-5 {
+        stroke-width: 10px;
+      }
+
+      .cls-16 {
+        letter-spacing: .14em;
+      }
+
+      .cls-17 {
+        letter-spacing: .12em;
+      }
+
+      .cls-18 {
+        letter-spacing: .06em;
+      }
+
+      .cls-19 {
+        letter-spacing: .04em;
+      }
+
+      .cls-20 {
+        letter-spacing: .07em;
+      }
+
+      .cls-21 {
+        letter-spacing: .07em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <text class="cls-8" transform="translate(0 167.82)"><tspan class="cls-14" x="0" y="0">KA</tspan><tspan class="cls-20" x="76.91" y="0">N</tspan><tspan class="cls-11" x="112.88" y="0">C</tspan><tspan class="cls-7" x="150.25" y="0">HA</tspan><tspan class="cls-12" x="229.36" y="0">N </tspan><tspan class="cls-19" x="275.88" y="0">S</tspan><tspan class="cls-11" x="311.06" y="0">T</tspan><tspan class="cls-20" x="346.9" y="0">UDI</tspan><tspan x="429" y="0">O</tspan></text>
+    <path class="cls-2" d="M58.84,54.68H9.26c-3.48,0-6.3,2.82-6.3,6.3v39.04"/>
+    <path class="cls-4" d="M57.93,62.19H15.98c-3,0-5.43,2.43-5.43,5.43v33.02"/>
+    <path class="cls-4" d="M57.89,235.44H15.94c-3,0-5.43-2.43-5.43-5.43v-33.02"/>
+    <path class="cls-4" d="M409.63,235.43h41.95c3,0,5.43-2.43,5.43-5.43v-33.02"/>
+    <path class="cls-4" d="M409.62,62.46h41.95c3,0,5.43,2.43,5.43,5.43v33.02"/>
+    <path class="cls-2" d="M58.84,243.01H9.37c-3.54,0-6.4-2.87-6.4-6.4v-38.94"/>
+    <path class="cls-2" d="M408.68,243.01h49.47c3.54,0,6.4-2.87,6.4-6.4v-38.94"/>
+    <path class="cls-2" d="M408.68,54.91h49.47c3.54,0,6.4,2.87,6.4,6.4v38.94"/>
+    <path class="cls-3" d="M136.61,54.97l26.59-43.02c3.63-5.87,10.04-9.44,16.94-9.44h106.24c6.88,0,13.27,3.55,16.91,9.39l27.14,43.62"/>
+    <path class="cls-6" d="M144.15,57.48l24.52-39.39c3.35-5.37,9.26-8.65,15.62-8.65h97.97c6.34,0,12.24,3.25,15.59,8.6l25.02,39.94"/>
+    <g>
+      <path class="cls-5" d="M330.4,122.17c-11.62-42.48-50.46-73.71-96.63-73.71s-85.01,31.23-96.63,73.71"/>
+      <path class="cls-5" d="M137.14,175.12c11.61,42.48,50.46,73.71,96.63,73.71s85.01-31.23,96.63-73.71"/>
+    </g>
+    <g>
+      <path class="cls-4" d="M319.55,125.14c-10.31-37.71-44.8-65.44-85.78-65.44s-75.47,27.73-85.78,65.44"/>
+      <path class="cls-4" d="M147.99,172.15c10.31,37.71,44.8,65.44,85.78,65.44s75.47-27.73,85.78-65.44"/>
+    </g>
+    <text class="cls-9" transform="translate(155.92 186.14)"><tspan class="cls-15" x="0" y="0">PH</tspan><tspan class="cls-21" x="26.34" y="0">O</tspan><tspan class="cls-18" x="40.88" y="0">T</tspan><tspan class="cls-15" x="53.11" y="0">OF</tspan><tspan class="cls-17" x="80.27" y="0">RA</tspan><tspan class="cls-16" x="109.08" y="0">MI</tspan><tspan class="cls-13" x="130.01" y="0">N</tspan><tspan class="cls-21" x="143.68" y="0">G</tspan></text>
+    <rect class="cls-10" x="413.74" y="33.51" width="40.05" height="11.18" rx="5.59" ry="5.59"/>
+    <rect class="cls-1" x="410.33" y="31.03" width="46.87" height="16.14" rx="8.07" ry="8.07"/>
+  </g>
+</svg>
