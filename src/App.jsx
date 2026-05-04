@@ -29,12 +29,12 @@ import EventPhotography from "./components/service/event-shoot/event-shoot";
 import ProductPhotography from "./components/service/product-photography/product-photography";
 import OutdoorPhotography from "./components/service/outdoor-shoot/outdoor-shoot";
 import MaternityShoot from "./components/service/materinity-shoot/materinity-shoot";
-import PhotoFraming from "./components/service/photo-framing/photoFraming";
+//import PhotoFraming from "./components/service/photo-framing/photoFraming";
 import WeddingCinemo from "./components/service/wedding-cinemo/wedding-cinemo";
 import Portrait from "./components/service/Portrait-shoot/Portrait";
-import PvcCard from './components/service/pvc-card/PvcCard';
-import Printout from './components/service/printout/Printout';
-import VisaPassport from './components/service/visa-passport/VisaPhoto';
+//import PvcCard from './components/service/pvc-card/PvcCard';
+//import Printout from './components/service/printout/Printout';
+//import VisaPassport from './components/service/visa-passport/VisaPhoto';
 import Birthday from './components/service/birthday-shoot/Birthday';
 import IndoorShoot from './components/service/indoor-shoot/Indoor'
 
@@ -43,7 +43,7 @@ import PhotoStudioWebsite from "./components/gallery/Gallery";
 
 import VisualDiaryGallery from "./components/Gallery";
 import LiveEventPhotograpghy from "./components/service/live-event/LiveEvent";
-import FoodPhotography from "./components/service/food/Food"
+// import FoodPhotography from "./components/service/food/Food"
 
 
 
@@ -93,16 +93,16 @@ const App = () => {
          <Route path="/services/live-event-photography" element={<LiveEventPhotograpghy/>} />
         <Route path="/services/product-photography" element={<ProductPhotography />} />
         <Route path="/services/outdoor-photography" element={<OutdoorPhotography />} />
-               <Route path="/services/food-photography" element={<FoodPhotography />} />
+               {/* <Route path="/services/food-photography" element={<FoodPhotography />} /> */}
         <Route path="/services/maternity-shoot" element={<MaternityShoot />} />
         <Route path="/services/portrait-shoot" element={<Portrait />} />
-        <Route path="/services/photo-framing" element={<PhotoFraming />} />
+        {/* <Route path="/services/photo-framing" element={<PhotoFraming />} /> */}
         <Route path="/services/wedding-cinemo" element={<WeddingCinemo />} />
-         <Route path="/services/pvc-cards" element={<PvcCard/>} />
-            <Route path="/services/photo-printing" element={<Printout/>} />
+         {/* <Route path="/services/pvc-cards" element={<PvcCard/>} /> */}
+            {/* <Route path="/services/photo-printing" element={<Printout/>} /> */}
              
 
-                        <Route path="/services/visa-passport" element={<VisaPassport/>} />
+                        {/* <Route path="/services/visa-passport" element={<VisaPassport/>} /> */}
                            <Route path="/services/birthday" element={<Birthday/>} />
       </Routes>
       <CallIcon/>
