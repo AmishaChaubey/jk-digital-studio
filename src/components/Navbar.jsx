@@ -81,16 +81,11 @@ const Navbar = () => {
     { name: "Contact", path: "/contact" },
   ];
   const serviceItems = [
-    { name: "Photo Framing", path: "/services/photo-framing" },
-    { name: "Photo Printing", path: "/services/photo-printing" },
     { name: "Indoor Shoot", path: "/services/indoor-shoot" },
     { name: "Outdoor Shoot", path: "/services/outdoor-photography" },
-    { name: "PVC Cards", path: "/services/pvc-cards" },
     { name: "Baby Shoot", path: "/services/baby-shoot" },
     { name: "Birthday Shoot", path: "/services/birthday" },
-    { name: "Visa-Passport", path: "/services/visa-passport" },
     { name: "Live Event Shoot", path: "/services/live-event-photography" },
-    { name: "Food Shoot", path: "/services/food-photography" },
     { name: "Wedding Event Shoot", path: "/services/event-photography" },
     { name: "Portrait Shoot", path: "/services/portrait-shoot" },
     { name: "Product Shoot", path: "/services/product-photography" },
@@ -129,35 +124,37 @@ const Navbar = () => {
           0%, 100% { transform: translate(0px, 0px) scale(1); }
           50% { transform: translate(5px, 10px) scale(1.03); }
         }
-        @keyframes shimmer {
-          0% { background-position: -200% center; }
-          100% { background-position: 200% center; }
-        }
 
         .orb-1 { animation: orb1 9s ease-in-out infinite; }
         .orb-2 { animation: orb2 12s ease-in-out infinite 1s; }
         .orb-3 { animation: orb3 7s ease-in-out infinite 2s; }
 
         .dropdown-animate { animation: slideDown 0.2s ease forwards; }
-        .modal-animate { animation: modalUp 0.3s ease forwards; }
-        .modal-overlay { animation: fadeIn 0.25s ease forwards; }
+        .modal-animate   { animation: modalUp 0.3s ease forwards; }
+        .modal-overlay   { animation: fadeIn 0.25s ease forwards; }
 
-        /* Glassmorphism navbar bg */
-        .navbar-glass-scrolled {
-          background: rgba(255, 255, 255, 0.82);
-          backdrop-filter: blur(20px) saturate(180%);
-          -webkit-backdrop-filter: blur(20px) saturate(180%);
-          border-bottom: 1px solid rgba(220, 38, 38, 0.12);
-          box-shadow: 0 4px 32px rgba(0,0,0,0.07), 0 1px 0 rgba(255,255,255,0.9) inset;
-        }
+        /*
+         * NAVBAR GLASS — LIGHT THEME
+         * Top (unscrolled): semi-transparent white so the hero shows through
+         *   softly AND the black logo / dark nav text are always legible.
+         * Scrolled: slightly more opaque for contrast against page content.
+         */
         .navbar-glass-top {
-          background: rgba(0, 0, 0, 0.18);
-          backdrop-filter: blur(12px) saturate(140%);
-          -webkit-backdrop-filter: blur(12px) saturate(140%);
-          border-bottom: 1px solid rgba(255,255,255,0.10);
+          background: rgba(255, 255, 255, 0.55);
+          backdrop-filter: blur(20px) saturate(170%);
+          -webkit-backdrop-filter: blur(20px) saturate(170%);
+          border-bottom: 1px solid rgba(220, 38, 38, 0.10);
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+        .navbar-glass-scrolled {
+          background: rgba(255, 255, 255, 0.85);
+          backdrop-filter: blur(24px) saturate(180%);
+          -webkit-backdrop-filter: blur(24px) saturate(180%);
+          border-bottom: 1px solid rgba(220, 38, 38, 0.13);
+          box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08),
+                      0 1px 0 rgba(255, 255, 255, 0.95) inset;
         }
 
-        /* Orb bg strip */
         .navbar-orb-bg {
           position: absolute;
           inset: 0;
@@ -166,7 +163,7 @@ const Navbar = () => {
           z-index: 0;
         }
 
-        /* Nav link underline effect */
+        /* Nav link underline hover */
         .nav-link {
           position: relative;
           padding: 6px 12px;
@@ -189,7 +186,7 @@ const Navbar = () => {
         .nav-link:hover::after,
         .nav-link.is-active::after { transform: scaleX(1); }
 
-        /* Book Now shimmer */
+        /* Book Now button */
         .book-btn {
           background: linear-gradient(135deg, #991b1b 0%, #b91c1c 40%, #dc2626 60%, #991b1b 100%);
           background-size: 200% auto;
@@ -201,21 +198,21 @@ const Navbar = () => {
           transform: translateY(-1px) scale(1.03);
         }
 
-        /* Mobile menu */
+        /* Mobile menu item */
         .mobile-item {
           border-left: 2.5px solid transparent;
           transition: all 0.2s ease;
           border-radius: 0 10px 10px 0;
         }
-        .mobile-item:hover { border-left-color: #dc2626; background: #fff1f2; color: #991b1b; }
+        .mobile-item:hover   { border-left-color: #dc2626; background: #fff1f2; color: #991b1b; }
         .mobile-item.is-active { border-left-color: #991b1b; background: #fee2e2; color: #991b1b; }
 
-        /* Scrollbars */
-        .scroll-red::-webkit-scrollbar { width: 4px; }
+        /* Custom scrollbar */
+        .scroll-red::-webkit-scrollbar       { width: 4px; }
         .scroll-red::-webkit-scrollbar-track { background: #fef2f2; }
         .scroll-red::-webkit-scrollbar-thumb { background: #b91c1c; border-radius: 4px; }
 
-        /* Inputs */
+        /* Form inputs */
         .f-input {
           width: 100%;
           padding: 8px 10px 8px 32px;
@@ -251,39 +248,29 @@ const Navbar = () => {
         }
       `}</style>
 
-      {/* ═══════════════ NAVBAR ═══════════════ */}
+      {/* ═══════════════════════ NAVBAR ═══════════════════════ */}
       <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'navbar-glass-scrolled' : 'navbar-glass-top'}`}>
 
-        {/* Decorative orbs — visible when not scrolled */}
-        {!isScrolled && (
-          <div className="navbar-orb-bg">
-            <div className="orb-1 absolute -top-6 left-[10%] w-28 h-28 rounded-full bg-red-600/20 blur-2xl" />
-            <div className="orb-2 absolute -top-4 left-1/2 w-36 h-20 rounded-full bg-rose-500/15 blur-2xl" />
-            <div className="orb-3 absolute -top-6 right-[12%] w-24 h-24 rounded-full bg-red-700/20 blur-2xl" />
-          </div>
-        )}
-
-        {/* Scrolled orbs — subtler */}
-        {isScrolled && (
-          <div className="navbar-orb-bg">
-            <div className="orb-1 absolute top-0 left-[8%] w-20 h-16 rounded-full bg-red-200/40 blur-2xl" />
-            <div className="orb-3 absolute top-0 right-[10%] w-24 h-14 rounded-full bg-rose-200/30 blur-2xl" />
-          </div>
-        )}
+        {/* Subtle red-tinted orbs — always visible, intensity adjusts */}
+        <div className="navbar-orb-bg">
+          <div className={`orb-1 absolute -top-6 left-[10%] w-28 h-28 rounded-full blur-2xl transition-opacity duration-700 ${isScrolled ? 'opacity-40' : 'opacity-60'} bg-red-300/40`} />
+          <div className={`orb-2 absolute -top-4 left-1/2  w-36 h-20 rounded-full blur-2xl transition-opacity duration-700 ${isScrolled ? 'opacity-30' : 'opacity-50'} bg-rose-200/50`} />
+          <div className={`orb-3 absolute -top-6 right-[12%] w-24 h-24 rounded-full blur-2xl transition-opacity duration-700 ${isScrolled ? 'opacity-35' : 'opacity-55'} bg-red-300/35`} />
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-[68px] sm:h-[76px] md:h-[84px]">
 
-            {/* ── Logo ── */}
+            {/* ── Logo — always visible on the light glass bg ── */}
             <Link to="/" className="flex-shrink-0 flex items-center">
               <img
-                src="/logo2.jpg"
+                src="/jk.svg"
                 alt="Kanchan Photo Studio"
-                className="h-16 sm:h-20 md:h-24 w-auto object-contain drop-shadow-md"
+                className="h-16 sm:h-20 md:h-22 w-auto object-contain"
               />
             </Link>
 
-            {/* ── Desktop Links ── */}
+            {/* ── Desktop nav links — dark text, always legible ── */}
             <div className="hidden min-[860px]:flex items-center gap-0.5 lg:gap-1">
               {navLinks.map((link) => (
                 <Link
@@ -292,9 +279,7 @@ const Navbar = () => {
                   className={`nav-link text-[11px] lg:text-xs font-bold tracking-widest uppercase ${
                     isActive(link.path)
                       ? 'is-active text-red-600'
-                      : isScrolled
-                      ? 'text-gray-800 hover:text-red-700'
-                      : 'text-white hover:text-red-200'
+                      : 'text-gray-800 hover:text-red-700'
                   }`}
                 >
                   {link.name}
@@ -312,9 +297,7 @@ const Navbar = () => {
                   className={`nav-link flex items-center gap-1 text-[11px] lg:text-xs font-bold tracking-widest uppercase ${
                     isActive("/services")
                       ? 'is-active text-red-600'
-                      : isScrolled
-                      ? 'text-gray-800 hover:text-red-700'
-                      : 'text-white hover:text-red-200'
+                      : 'text-gray-800 hover:text-red-700'
                   }`}
                 >
                   Services
@@ -354,9 +337,7 @@ const Navbar = () => {
                   className={`nav-link text-[11px] lg:text-xs font-bold tracking-widest uppercase ${
                     isActive(link.path)
                       ? 'is-active text-red-600'
-                      : isScrolled
-                      ? 'text-gray-800 hover:text-red-700'
-                      : 'text-white hover:text-red-200'
+                      : 'text-gray-800 hover:text-red-700'
                   }`}
                 >
                   {link.name}
@@ -373,14 +354,10 @@ const Navbar = () => {
               Book Now
             </button>
 
-            {/* ── Mobile toggle ── */}
+            {/* ── Mobile hamburger ── */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`min-[860px]:hidden p-2 rounded-xl transition-all duration-300 ${
-                isScrolled
-                  ? 'text-gray-800 hover:bg-red-50 hover:text-red-700'
-                  : 'text-white hover:bg-white/15'
-              }`}
+              className="min-[860px]:hidden p-2 rounded-xl text-gray-800 hover:bg-red-50 hover:text-red-700 transition-all duration-300"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X size={23} /> : <Menu size={23} />}
@@ -388,14 +365,11 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* ═══ Mobile Menu ═══ */}
+        {/* ═══════════ Mobile Menu ═══════════ */}
         <div className={`min-[860px]:hidden overflow-hidden transition-all duration-400 ease-in-out ${
           isMobileMenuOpen ? 'max-h-[88vh] opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          {/* Glassmorphism panel */}
           <div className="bg-white/90 backdrop-blur-2xl border-t border-red-100/60 shadow-xl">
-
-            {/* Subtle orb inside mobile menu */}
             <div className="absolute left-0 right-0 h-full overflow-hidden pointer-events-none">
               <div className="absolute top-4 right-6 w-32 h-32 rounded-full bg-red-100/60 blur-3xl" />
               <div className="absolute bottom-4 left-6 w-24 h-24 rounded-full bg-rose-100/50 blur-2xl" />
@@ -416,7 +390,7 @@ const Navbar = () => {
                 </Link>
               ))}
 
-              {/* Mobile Services */}
+              {/* Mobile Services accordion */}
               <div className="mb-1">
                 <button
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
@@ -475,7 +449,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* ═══════════════ BOOKING MODAL ═══════════════ */}
+      {/* ═══════════════════════ BOOKING MODAL ═══════════════════════ */}
       {isBookingModalOpen && (
         <div
           className="modal-overlay fixed inset-0 z-[60] flex items-end sm:items-center justify-center bg-black/65 backdrop-blur-sm p-0 sm:p-4"
@@ -487,7 +461,6 @@ const Navbar = () => {
             <div className="relative h-28 sm:h-32 flex-shrink-0 overflow-hidden">
               <img src="/booknow.jpg" alt="Book Now" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-r from-red-900/85 via-red-900/60 to-black/40" />
-              {/* Orb in modal banner */}
               <div className="absolute top-0 right-0 w-28 h-28 rounded-full bg-rose-500/20 blur-2xl pointer-events-none" />
               <div className="absolute inset-0 flex items-center px-5 sm:px-6">
                 <div>
@@ -498,7 +471,6 @@ const Navbar = () => {
                   <p className="text-white/60 text-[11px] mt-0.5">We'll reach out to confirm your slot.</p>
                 </div>
               </div>
-              {/* Mobile drag handle */}
               <div className="absolute top-2 left-1/2 -translate-x-1/2 w-10 h-1 bg-white/30 rounded-full sm:hidden" />
               <button
                 onClick={() => setIsBookingModalOpen(false)}

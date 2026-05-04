@@ -9,13 +9,13 @@ const Banner = () => {
 
   const slides = [
     {
-      image: "/banner/banner2.jpg",
+      image: "https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Timeless Portraits.",
       titleAccent: "Perfect Shots.",
       subtitle: "Timeless Photography for Life's Most Cherished Stories",
     },
     {
-      image: "/banner/banner3.jpg",
+      image: "https://images.pexels.com/photos/8324904/pexels-photo-8324904.jpeg",
       title: "Every Moment",
       titleAccent: "Beautifully Captured.",
       subtitle: "Professional photography that turns memories into masterpieces",
