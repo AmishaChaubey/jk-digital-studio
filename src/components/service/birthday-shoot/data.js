@@ -82,7 +82,7 @@
 // ];
 
 export const bannerConfig = {
-  backgroundImage: "/birthday-img/birthday.jpeg",
+  backgroundImage: "/birthday-img/birthday.jpg",
   badge: "Professional Photography",
   title: " Birthday Photography",
   description: "Explore our collection — where every smile, spark, and story comes alive."

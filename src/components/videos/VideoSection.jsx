@@ -179,23 +179,24 @@ const VideoSection = () => {
       <div className="pointer-events-none fixed bottom-40 right-20 w-96 h-96 bg-red-300/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.2s' }} />
 
       {/* ── Banner ── */}
-      <header className="relative h-[55vh] sm:h-[70vh] flex items-center justify-center text-center overflow-hidden">
+      <header className="relative min-h-screen sm:h-[70vh] flex items-center justify-center text-center overflow-hidden">
         <img
-          src="/video-banner2.jpg"
+          src="/video-banner2.avif"
           alt="Photo Studio Banner"
           className="absolute inset-0 w-full h-full object-cover animate-zoom"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
 
         <div className="relative z-10 px-4 sm:px-8 max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-1.5 rounded-full mb-5">
-            <Aperture size={14} className="text-red-400" />
-            <span className="text-white/80 text-xs tracking-widest font-semibold uppercase" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-              Studio Mastery
-            </span>
+           <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-8 h-0.5 bg-red-600"></div>
+            <p className="text-red-400 text-xs font-bold mt-0 uppercase tracking-[0.2em]">
+             Studio Mastery
+            </p>
+            <div className="w-8 h-0.5 bg-red-600"></div>
           </div>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4 text-white leading-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
-            Capture Perfect Moments
+           Turning Moments into Perfection
           </h1>
           <p className="text-base sm:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
             Master the art of photography with professional techniques and studio secrets

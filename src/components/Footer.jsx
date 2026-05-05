@@ -27,7 +27,7 @@ const Footer = () => {
     { name: "Wedding Photography", path: "/services/wedding-photography" },
     { name: "Live Photography", path: "/services/live-event-photography" },
     { name: "Maternity Photography", path: "/services/maternity-shoot" },
-    { name: "Drone Photography", path: "/services/wedding-photography" },
+    { name: "Wedding Cinematography", path: "/services/wedding-cinemo" },
     { name: "Event Photography", path: "/services/wedding-photography" },
   ];
 

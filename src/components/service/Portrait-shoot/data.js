@@ -82,7 +82,7 @@
 // ];
 
 export const bannerConfig = {
-  backgroundImage: "/event-img/bannerr.jpg",
+  backgroundImage: "/event-img/portrait.jpg",
   badge: "Professional Photography",
   title: " Portrait Photography",
   description: "Explore our collection — where every smile, spark, and story comes alive."

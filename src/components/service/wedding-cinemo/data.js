@@ -82,7 +82,7 @@
 // ];
 
 export const bannerConfig = {
-  backgroundImage: "/event-img/bannerr.jpg",
+  backgroundImage: "/event-img/cinemo.jpg",
   badge: "Professional Photography",
   title: " Wedding Cinemography",
   description: "Explore our collection — where every smile, spark, and story comes alive."

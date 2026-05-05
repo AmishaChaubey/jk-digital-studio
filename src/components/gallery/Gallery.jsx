@@ -8,14 +8,54 @@ const PhotoStudioWebsite = () => {
   const [lightboxImg, setLightboxImg] = useState(null);
 
   const categories = [
-    { id: "wedding", title: "Wedding Photography", coverImage: "/wedd-img/wedding3.jfif", count: "Premium" },
-    { id: "prewedding", title: "Pre-Wedding Photography", coverImage: "pre-wedd/pre-wedd1.jpeg", count: "Romantic" },
-    { id: "portrait", title: "Portrait Studio", coverImage: "pot-img/port8.jpg", count: "Artistic" },
-    { id: "babyshoot", title: "Baby Shoot", coverImage: "/baby-img/baby22.jpg", count: "Adorable" },
-    { id: "birthday", title: "Birthday Photography", coverImage: "/birthday-img/birthday10.jfif", count: "Joyful" },
-    { id: "maternity", title: "Maternity Shoot", coverImage: "/maternity-img/mat1.jpg", count: "Beautiful" },
-    { id: "corporate", title: "Corporate Photography", coverImage: "/corporate-img/corp1.jpg", count: "Professional" },
-    { id: "fashion", title: "Fashion Photography", coverImage: "/fashion-img/fash1.jpg", count: "Editorial" },
+    {
+      id: "wedding",
+      title: "Wedding Photography",
+      coverImage: "/wedd-img/wedding3.jfif",
+      count: "Premium",
+    },
+    {
+      id: "prewedding",
+      title: "Pre-Wedding Photography",
+      coverImage: "pre-wedd/pre-wedd1.jpeg",
+      count: "Romantic",
+    },
+    {
+      id: "portrait",
+      title: "Portrait Studio",
+      coverImage: "pot-img/port8.jpg",
+      count: "Artistic",
+    },
+    {
+      id: "babyshoot",
+      title: "Baby Shoot",
+      coverImage: "/baby-img/baby22.jpg",
+      count: "Adorable",
+    },
+    {
+      id: "birthday",
+      title: "Birthday Photography",
+      coverImage: "/birthday-img/birthday10.jfif",
+      count: "Joyful",
+    },
+    {
+      id: "maternity",
+      title: "Maternity Shoot",
+      coverImage: "/maternity-img/mat1.jpg",
+      count: "Beautiful",
+    },
+    {
+      id: "corporate",
+      title: "Corporate Photography",
+      coverImage: "/corporate-img/corp1.jpg",
+      count: "Professional",
+    },
+    {
+      id: "fashion",
+      title: "Fashion Photography",
+      coverImage: "/fashion-img/fash1.jpg",
+      count: "Editorial",
+    },
   ];
 
   useEffect(() => window.scrollTo(0, 0), []);
@@ -43,7 +83,9 @@ const PhotoStudioWebsite = () => {
     setLightboxImg(null);
   };
 
-  const selectedCategoryData = categories.find((c) => c.id === selectedCategory);
+  const selectedCategoryData = categories.find(
+    (c) => c.id === selectedCategory,
+  );
 
   return (
     <div className="min-h-screen bg-white">
@@ -100,25 +142,27 @@ const PhotoStudioWebsite = () => {
       `}</style>
 
       {/* ── Banner ── */}
-      <section className="relative h-[55vh] sm:h-[72vh] flex items-center justify-center text-center overflow-hidden">
+      <section className="relative min-h-screen sm:h-[72vh] flex items-center justify-center text-center overflow-hidden">
         <img
           src="/banner/gallery-banner.jpg"
           alt="Photo Studio Banner"
           className="absolute inset-0 w-full h-full object-cover animate-zoom"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-white/50" />
         <div className="relative z-10 px-4 sm:px-8 animate-fade-up">
-          <div className="inline-flex items-center gap-2 border border-white/30 bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full mb-5">
-            <Camera size={13} className="text-red-300" />
-            <span className="text-white/80 text-[11px] tracking-widest font-semibold uppercase">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-8 h-0.5 bg-red-600"></div>
+            <p className="text-red-400 text-xs font-bold mt-0 uppercase tracking-[0.2em]">
               Photo Gallery
-            </span>
+            </p>
+            <div className="w-8 h-0.5 bg-red-600"></div>
           </div>
           <h1
             className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4 text-white leading-tight drop-shadow-lg"
-            style={{ fontFamily: 'Georgia, serif' }}
+            style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Moments That<br className="hidden sm:block" /> Speak Volumes
+           Turning Instants Into Expressions
+            
           </h1>
           <p className="text-base sm:text-lg text-gray-200 max-w-xl mx-auto leading-relaxed drop-shadow">
             Capturing life's precious moments with artistry and passion
@@ -128,13 +172,12 @@ const PhotoStudioWebsite = () => {
 
       {/* ── Main ── */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-14">
-
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-10">
           <Grid3X3 size={18} className="text-red-800" />
           <h2
             className="text-gray-900 text-2xl sm:text-3xl font-bold"
-            style={{ fontFamily: 'Georgia, serif' }}
+            style={{ fontFamily: "Georgia, serif" }}
           >
             Our Collections
           </h2>
@@ -167,7 +210,7 @@ const PhotoStudioWebsite = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <h3
                     className="text-white text-lg font-bold leading-snug mb-1 drop-shadow"
-                    style={{ fontFamily: 'Georgia, serif' }}
+                    style={{ fontFamily: "Georgia, serif" }}
                   >
                     {category.title}
                   </h3>
@@ -189,7 +232,6 @@ const PhotoStudioWebsite = () => {
         <div className="fixed inset-0 bg-white z-50 overflow-y-auto scrollbar-light animate-fade-in">
           <div className="min-h-screen px-4 sm:px-6 lg:px-10 py-8">
             <div className="max-w-7xl mx-auto">
-
               {/* Modal Header */}
               <div className="flex justify-between items-center mb-8 sticky top-4 z-10 bg-white/95 backdrop-blur-sm py-3 px-4 rounded-2xl shadow-sm border border-gray-100">
                 <div className="flex items-center gap-3">
@@ -197,13 +239,16 @@ const PhotoStudioWebsite = () => {
                     onClick={closeModal}
                     className="flex items-center gap-1.5 text-gray-400 hover:text-gray-800 text-sm transition-colors group"
                   >
-                    <ArrowLeft size={15} className="group-hover:-translate-x-0.5 transition-transform" />
+                    <ArrowLeft
+                      size={15}
+                      className="group-hover:-translate-x-0.5 transition-transform"
+                    />
                     Back
                   </button>
                   <div className="w-px h-5 bg-gray-200" />
                   <h2
                     className="text-gray-900 text-lg sm:text-2xl font-bold"
-                    style={{ fontFamily: 'Georgia, serif' }}
+                    style={{ fontFamily: "Georgia, serif" }}
                   >
                     {selectedCategoryData?.title}
                   </h2>
@@ -221,7 +266,11 @@ const PhotoStudioWebsite = () => {
                 <div className="text-center py-28">
                   <div className="inline-flex gap-1.5 mb-3">
                     {[0, 0.15, 0.3].map((d, i) => (
-                      <span key={i} className="w-2.5 h-2.5 bg-red-800 rounded-full animate-bounce" style={{ animationDelay: `${d}s` }} />
+                      <span
+                        key={i}
+                        className="w-2.5 h-2.5 bg-red-800 rounded-full animate-bounce"
+                        style={{ animationDelay: `${d}s` }}
+                      />
                     ))}
                   </div>
                   <p className="text-gray-400 text-sm">Loading images...</p>
@@ -232,7 +281,9 @@ const PhotoStudioWebsite = () => {
               {!loadingImages && categoryImages.length === 0 && (
                 <div className="text-center py-28">
                   <Camera size={40} className="text-gray-300 mx-auto mb-3" />
-                  <p className="text-gray-400 text-lg">No photos in this category yet</p>
+                  <p className="text-gray-400 text-lg">
+                    No photos in this category yet
+                  </p>
                 </div>
               )}
 
@@ -253,14 +304,15 @@ const PhotoStudioWebsite = () => {
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-xl" />
                       {img.title && (
                         <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/65 to-transparent opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                          <p className="text-white text-xs font-medium">{img.title}</p>
+                          <p className="text-white text-xs font-medium">
+                            {img.title}
+                          </p>
                         </div>
                       )}
                     </div>
                   ))}
                 </div>
               )}
-
             </div>
           </div>
         </div>
@@ -285,7 +337,9 @@ const PhotoStudioWebsite = () => {
             onClick={(e) => e.stopPropagation()}
           />
           {lightboxImg.title && (
-            <p className="absolute bottom-6 text-gray-400 text-sm">{lightboxImg.title}</p>
+            <p className="absolute bottom-6 text-gray-400 text-sm">
+              {lightboxImg.title}
+            </p>
           )}
         </div>
       )}

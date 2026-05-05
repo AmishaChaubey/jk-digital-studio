@@ -172,16 +172,24 @@ export default function PhotoStudioGallery() {
   return (
     <div className="min-h-screen bg-white">
       {/* Banner Section */}
-      <header className="relative h-[60vh] sm:h-[80vh] flex items-center justify-center text-center overflow-hidden">
+      <header className="relative min-h-screen sm:h-[80vh] flex items-center justify-center text-center overflow-hidden">
         <img
-          src="/banner/service-banner.jpg"
+          src="/banner/service-banner.avif"
           alt="Photo Studio Banner"
           className="absolute inset-0 w-full h-full object-cover animate-zoom"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"></div>
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 py-40 md:py-45">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4 text-white">
-            Your Story, Perfectly Framed
+         <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-8 h-0.5 bg-red-600"></div>
+            <p className="text-red-400 text-xs font-bold mt-0 uppercase tracking-[0.2em]">
+              Our Services
+            </p>
+            <div className="w-8 h-0.5 bg-red-600"></div>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4 text-white"
+          style={{ fontFamily: "'Playfair Display', serif" }}>
+          Expert Shots Lasting Stories
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-200">
             Capturing life's precious moments with artistry and passion

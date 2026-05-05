@@ -82,7 +82,7 @@
 // ];
 
 export const bannerConfig = {
-  backgroundImage: "/event-img/bannerr.jpg",
+  backgroundImage: "/event-img/maternity.avif",
   badge: "Professional Photography",
   title: " Maternity Photography",
   description: "Explore our collection — where every smile, spark, and story comes alive."

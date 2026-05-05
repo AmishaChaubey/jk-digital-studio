@@ -125,7 +125,7 @@ export default function ContactPage() {
         <div
           className="absolute inset-0 bg-cover bg-center scale-105"
           style={{
-            backgroundImage: "url('/banner/contact-banner.jpg')",
+            backgroundImage: "url('/banner/contact-banner.avif')",
             animation: "zoom 15s ease-in-out infinite",
           }}
         ></div>

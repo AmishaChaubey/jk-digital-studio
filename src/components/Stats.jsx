@@ -21,7 +21,7 @@ const Stats = () => {
       label: "Projects Delivered",
     },
     { icon: MapPin, value: 50, suffix: "+", label: "Cities" },
-    { icon: Star, value: 99, suffix: "%", label: "Customer Satisfaction" },
+    { icon: Star, value: 99,suffix:"%", label: "Customer Satisfaction" },
   ];
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -108,7 +108,7 @@ const Stats = () => {
                 style={cardSprings[index]}
                 className="group relative"
               >
-                <div className="relative bg-white border border-gray-100 hover:border-red-200 rounded-2xl p-6 sm:p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-red-100 overflow-hidden">
+                <div className="relative bg-white border border-gray-100 hover:border-red-200 rounded-2xl  sm:p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-red-100 overflow-hidden">
                   {/* Top accent bar */}
                   <div className="absolute top-0 left-0 w-full h-1 bg-red-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-t-2xl"></div>
 
@@ -132,7 +132,8 @@ const Stats = () => {
                         stat.value % 1 !== 0 ? n.toFixed(1) : Math.floor(n),
                       )}
                     </animated.span>
-                    {stat.value % 1 === 0 ? "+" : ""}
+                    {stat.value % 1 === 0 ? '' : '' }
+                    {stat.suffix}
                   </h3>
 
                   {/* Label */}
