@@ -14,7 +14,7 @@ import CTA from "./components/CTA";
 import ContactPage from "./components/contact/Contact";
 import Portfolio from "./components/Portfolio";
 import WhyChooseUs from "./components/WhyChoose";
-import AboutPage from "./components/about/About";
+import AboutPage from "./components/About/HeroSection";
 
 // Pages
 import PortfolioPage from "./components/portfolio/PortfolioPage";
@@ -48,12 +48,17 @@ import AdminPanel from '../../frontend2/src/components/AdminPanel';
 
 import AdminLogin from '../../frontend2/src/pages/AdminLogin';
 import ProtectedRoute from '../../frontend2/src/components/ProtectedRoute';
+import HeroSection from "./components/About/HeroSection";
+import Mission from "./components/About/Misson";
+import OurJourney from "./components/About/OurJourney";
+
+import WhyChooseUsAbout from "./components/About/WhyChooseUsAbout";
 
 
 // ── Layout wrapper: hides Navbar/Footer/Icons on /admin ──────
 const Layout = ({ children }) => {
   const location = useLocation();
-  const isAdmin = location.pathname === '/admin';
+  const isAdmin = location.pathname.startsWith('/admin');
 
   return (
     <>
@@ -67,6 +72,8 @@ const Layout = ({ children }) => {
     </>
   );
 };
+
+const isAdmin = location.pathname === '/admin' || location.pathname === '/admin/login';
 
 const App = () => {
   return (
@@ -89,8 +96,18 @@ const App = () => {
               </>
             }
           />
+          <Route path="/about" element={
+            <>
+              <HeroSection/>
+              <OurJourney/>
+              <Mission/>
+              
+              <WhyChooseUsAbout/>
+            </>
+          }/>
 
-          <Route path="/about" element={<AboutPage />} />
+          {/* <Route path="/about" element={<AboutPage />} /> */}
+          
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/gallery" element={<PhotoStudioWebsite />} />
