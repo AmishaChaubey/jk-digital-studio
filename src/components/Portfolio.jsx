@@ -60,7 +60,7 @@ const Portfolio = () => {
     {
       id: 6,
       category: "indoorshoot",
-      title: "Indoor Studio Shoot",
+      title: "Indoor Shoot",
       description:
         "Studio-based indoor photography with controlled lighting setup",
       image: "/model/md16.jpg",

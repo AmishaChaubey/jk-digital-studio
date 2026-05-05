@@ -11,8 +11,8 @@ export default function PhotoStudioGallery() {
       description: "Capturing your special moments with elegance",
       region: "Premium Package",
       link: "/services/wedding-photography",
-      image: "wedd-img/wedd1.jpg",
-      hoverImage: "wedd-img/wedd2.jpg",
+      image: "wedding/w3.jpg",
+      hoverImage: "wedding/w2.jpg",
       imageCount: 11
     },
        {
@@ -21,8 +21,8 @@ export default function PhotoStudioGallery() {
       description: "Romantic couple photography for unforgettable memories",
       region: "Destination Available",
       link: "/services/prewedding-shoot",
-      image: "/pre-wedd/pre-wedd1.jpeg",
-      hoverImage: "/pre-wedd/pre-wedd2.jpeg",
+      image: "/pre/p1.jpg",
+      hoverImage: "/pre/p2.jpg",
       imageCount: 11
     },
        {
@@ -31,8 +31,8 @@ export default function PhotoStudioGallery() {
       description: "Romantic couple photography for unforgettable memories",
       region: "Destination Available",
       link: "/services/prewedding-shoot",
-      image: "/wedd-ci/wedd-ci2.jpg",
-      hoverImage: "/wedd-ci/wedd-ci3.jpg",
+      image: "/wedd-ci/wc7.jpg",
+      hoverImage: "/wedd-ci/wedd-cin3.jfif",
       imageCount: 11
     },
       {
@@ -51,8 +51,8 @@ export default function PhotoStudioGallery() {
       description: "Professional  portraits and lifestyle shots",
       region: "Studio Sessions",
       link: "/services/portrait-shoot",
-      image: "/pot-img/pot2.jpg",
-      hoverImage: "/pot-img/pot3.jpg",
+      image: "/pot-img/port2.jpg",
+      hoverImage: "/pot-img/port.jpg",
       imageCount: 11
     },
        {
