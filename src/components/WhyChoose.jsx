@@ -60,7 +60,7 @@ const WhyChooseUs = () => {
             className="relative rounded-2xl overflow-hidden group min-h-[320px] sm:min-h-[400px]"
           >
             <img
-              src="/wedd-ci/wedd-cin7.jfif"
+              src="/wedd-ci/wc7.jpg"
               alt="Professional Photography"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

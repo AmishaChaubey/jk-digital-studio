@@ -10,12 +10,12 @@ export default function MarqueePhotoGallery() {
     { url: "/pre/p6.jpg", alt: "Pre-Wedding shoot", category: "Pre-Wedding", link: "/services/prewedding-shoot" },
     { url: "/pot-img/port2.jpg", alt: "Portrait photography", category: "Portrait", link: "/services/portrait-shoot" },
     { url: "/event-img/wedd-event4.jfif", alt: "Event Photography", category: "Event", link: "/services/event-photography" },
-    { url: "/product-img/pro3.jfif", alt: "Product photography", category: "Product", link: "/services/product-photography" },
-    { url: "/indoor-img/indoor11.jpg", alt: "Indoor photoshoot", category: "Indoor", link: "/services/indoor-shoot" },
-    { url: "/out-img/out1.jpeg", alt: "Outdoor photoshoot", category: "Outdoor", link: "/services/outdoor-photography" },
+    { url: "/produ/pro5.jpg", alt: "Product photography", category: "Product", link: "/services/product-photography" },
+    { url: "/model/md8.jpg", alt: "Indoor photoshoot", category: "Indoor", link: "/services/indoor-shoot" },
+    { url: "/out-img/ot4.jpeg", alt: "Outdoor photoshoot", category: "Outdoor", link: "/services/outdoor-photography" },
     { url: "/birthday-img/birthday10.jfif", alt: "Birthday photoshoot", category: "Birthday", link: "/services/birthday" },
     { url: "/baby-img/baby9.jpg", alt: "Baby Photoshoot", category: "Baby Shoot", link: "/services/baby-shoot" },
-    { url: "/printout-img/printout4.jpg", alt: "Photo Printout", category: "Printing", link: "/services/photo-printing" },
+   
   ];
 
   const row = [...images, ...images];

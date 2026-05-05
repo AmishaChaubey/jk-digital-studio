@@ -1,59 +1,126 @@
-import React, { useState } from 'react';
-import { X, ArrowRight, ZoomIn } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { X, ArrowRight, ZoomIn } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   const categories = [
-    { id: 'all', name: 'All Work' },
-    { id: 'wedding', name: 'Weddings' },
-    { id: 'portrait', name: 'Portraits' },
-    { id: 'events', name: 'Events' },
+    { id: "all", name: "All Work" },
+    { id: "wedding", name: "Weddings" },
+    { id: "portrait", name: "Portraits" },
+    { id: "events", name: "Events" },
   ];
-
   const portfolio = [
-    { id: 1, category: 'wedding', title: 'Wedding Photoshoot', description: 'Elegant ceremony capturing timeless moments', image: '/wedd-img/wedding5.jfif', link: '/services/wedding-photography' },
-    { id: 2, category: 'portrait', title: 'Portrait Shoot', description: 'Professional headshot for corporate branding', image: '/pot-img/port.jpg', link: '/services/portrait-shoot' },
-    { id: 4, category: 'Haldi', title: 'Haldi Shoot', description: 'Vibrant haldi moments with modern elegance', image: '/wedd-img/haldi.jfif', link: '/services/wedding-photography' },
-    { id: 5, category: 'events', title: 'Event Shoot', description: 'Annual gala with celebrity guests', image: '/even/live4.jfif', link: '/services/event-photography' },
-    { id: 6, category: 'mehndi', title: 'Mehndi Shoot', description: 'Joyful mehndi moments surrounded by love', image: '/wedd-img/mehndi.jfif', link: '/services/wedding-photography' },
-    { id: 7, category: 'baby', title: 'Baby Photography', description: 'Precious early moments captured with tenderness', image: '/baby-img/baby1.jpg', link: '/services/baby-shoot' },
+    {
+      id: 1,
+      category: "wedding",
+      title: "Wedding Photoshoot",
+      description:
+        "Full wedding coverage capturing rituals, emotions, and candid moments",
+      image: "/wedding/w2.jpg",
+      link: "/services/wedding-photography",
+    },
+    {
+      id: 2,
+      category: "pre-wedding",
+      title: "Pre-Wedding Shoot",
+      description:
+        "Romantic and cinematic pre-wedding shoots at beautiful locations",
+      image: "/pre/p2.jpg",
+      link: "/services/prewedding-shoot",
+    },
+ 
+    {
+      id: 4,
+      category: "model",
+      title: "Model Portfolio Shoot",
+      description:
+        "Professional model portfolio photography for fashion and branding",
+      image: "/model/md21.jpg",
+      link: "/services/model-shoot",
+    },
+       {
+      id: 3,
+      category: "baby",
+      title: "Baby Photography",
+      description:
+        "Cute and creative baby shoots capturing precious early moments",
+      image: "/baby-img/baby29.jpg",
+      link: "/services/baby-shoot",
+    },
+    {
+      id: 5,
+      category: "outdoor",
+      title: "Outdoor Shoot",
+      description: "Natural light outdoor photography at scenic locations",
+      image: "/out-img/ot2.jpeg",
+      link: "/services/outdoor-photography",
+    },
+    {
+      id: 6,
+      category: "indoorshoot",
+      title: "Indoor Shoot",
+      description:
+        "Studio-based indoor photography with controlled lighting setup",
+      image: "/model/md16.jpg",
+      link: "/services/indoor-shoot",
+    },
+    {
+      id: 7,
+      category: "Maternity",
+      title: "Maternity Shoot",
+      description: "Elegant maternity photography celebrating motherhood",
+      image: "/maternity-img/maternity2.jpeg",
+      link: "/services/maternity-shoot",
+    },
+    {
+      id: 8,
+      category: "product",
+      title: "Product Photography",
+      description: "High-quality product shoots for eCommerce and branding",
+      image: "/produ/pro5.jpg",
+      link: "/services/product-photography",
+    },
   ];
 
   const filteredPortfolio =
-    selectedCategory === 'all'
+    selectedCategory === "all"
       ? portfolio
       : portfolio.filter((item) => item.category === selectedCategory);
 
   const getGridClass = (index, total) => {
-    if (total === 1) return 'col-span-2 row-span-2';
-    if (total === 2) return 'col-span-2 sm:col-span-1 row-span-1';
+    if (total === 1) return "col-span-2 row-span-2";
+    if (total === 2) return "col-span-2 sm:col-span-1 row-span-1";
     const patterns = [
-      'col-span-2 sm:col-span-2 row-span-2',
-      'col-span-2 sm:col-span-1 row-span-1',
-      'col-span-2 sm:col-span-1 row-span-1',
-      'col-span-2 sm:col-span-2 row-span-1',
-      'col-span-2 sm:col-span-1 row-span-1',
-      'col-span-2 sm:col-span-1 row-span-1',
+      "col-span-2 sm:col-span-2 row-span-2",
+      "col-span-2 sm:col-span-1 row-span-1",
+      "col-span-2 sm:col-span-1 row-span-1",
+      "col-span-2 sm:col-span-2 row-span-1",
+      "col-span-2 sm:col-span-1 row-span-1",
+      "col-span-2 sm:col-span-1 row-span-1",
     ];
-    return patterns[index] || 'col-span-2 sm:col-span-1 row-span-1';
+    return patterns[index] || "col-span-2 sm:col-span-1 row-span-1";
   };
 
   return (
-    <section className="py-16 sm:py-20 bg-white relative overflow-hidden" id="portfolio">
+    <section
+      className="py-16 sm:py-20 bg-white relative overflow-hidden"
+      id="portfolio"
+    >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 -left-24 w-80 h-80 bg-red-100 rounded-full opacity-25 blur-3xl"></div>
         <div className="absolute bottom-1/4 -right-24 w-80 h-80 bg-red-50 rounded-full opacity-25 blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
         {/* Header */}
         <div className="text-center mb-10 sm:mb-14">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-8 h-0.5 bg-red-600"></div>
-            <p className="text-red-600 text-xs font-bold uppercase tracking-[0.2em]">Our Portfolio</p>
+            <p className="text-red-600 text-xs font-bold uppercase tracking-[0.2em]">
+              Our Portfolio
+            </p>
             <div className="w-8 h-0.5 bg-red-600"></div>
           </div>
           <h2
@@ -63,7 +130,8 @@ const Portfolio = () => {
             Our <span className="text-red-600">Portfolio</span>
           </h2>
           <p className="text-gray-500 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-            Explore our diverse collection of visual stories, each frame crafted with precision and passion.
+            Explore our diverse collection of visual stories, each frame crafted
+            with precision and passion.
           </p>
         </div>
 
@@ -75,8 +143,8 @@ const Portfolio = () => {
               onClick={() => setSelectedCategory(category.id)}
               className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
-                  ? 'bg-red-600 text-white shadow-lg shadow-red-200'
-                  : 'bg-gray-50 text-gray-500 border border-gray-100 hover:border-red-200 hover:text-red-600 hover:bg-red-50'
+                  ? "bg-red-600 text-white shadow-lg shadow-red-200"
+                  : "bg-gray-50 text-gray-500 border border-gray-100 hover:border-red-200 hover:text-red-600 hover:bg-red-50"
               }`}
             >
               {category.name}
@@ -85,13 +153,15 @@ const Portfolio = () => {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 auto-rows-[180px] sm:auto-rows-[200px]">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 auto-rows-[240px] sm:auto-rows-[280px]">
           {filteredPortfolio.map((item, index) => (
             <Link
               to={item.link}
               key={`${item.id}-${index}`}
               className={`${getGridClass(index, filteredPortfolio.length)} group relative overflow-hidden rounded-2xl cursor-pointer border border-gray-100 hover:border-red-200 shadow-md hover:shadow-2xl hover:shadow-red-100 transition-all duration-500 block`}
-              style={{ animation: `fadeInUp 0.5s ease-out ${index * 0.08}s both` }}
+              style={{
+                animation: `fadeInUp 0.5s ease-out ${index * 0.08}s both`,
+              }}
             >
               <img
                 src={item.image}
@@ -127,7 +197,9 @@ const Portfolio = () => {
                   {item.title}
                 </h3>
                 <div className="flex items-center gap-1 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                  <p className="text-white/70 text-xs line-clamp-1">{item.description}</p>
+                  <p className="text-white/70 text-xs line-clamp-1">
+                    {item.description}
+                  </p>
                   <ArrowRight className="w-3 h-3 text-red-400 flex-shrink-0 ml-1" />
                 </div>
               </div>
@@ -143,7 +215,9 @@ const Portfolio = () => {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
             </button>
           </Link>
-          <p className="mt-2.5 text-gray-400 text-xs">Hundreds of moments captured across all categories</p>
+          <p className="mt-2.5 text-gray-400 text-xs">
+            Hundreds of moments captured across all categories
+          </p>
         </div>
       </div>
 

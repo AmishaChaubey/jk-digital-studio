@@ -11,8 +11,8 @@ export default function PhotoStudioGallery() {
       description: "Capturing your special moments with elegance",
       region: "Premium Package",
       link: "/services/wedding-photography",
-      image: "wedd-img/wedd1.jpg",
-      hoverImage: "wedd-img/wedd2.jpg",
+      image: "wedding/w3.jpg",
+      hoverImage: "wedding/w2.jpg",
       imageCount: 11
     },
        {
@@ -21,8 +21,8 @@ export default function PhotoStudioGallery() {
       description: "Romantic couple photography for unforgettable memories",
       region: "Destination Available",
       link: "/services/prewedding-shoot",
-      image: "/pre-wedd/pre-wedd1.jpeg",
-      hoverImage: "/pre-wedd/pre-wedd2.jpeg",
+      image: "/pre/p1.jpg",
+      hoverImage: "/pre/p2.jpg",
       imageCount: 11
     },
        {
@@ -31,8 +31,8 @@ export default function PhotoStudioGallery() {
       description: "Romantic couple photography for unforgettable memories",
       region: "Destination Available",
       link: "/services/prewedding-shoot",
-      image: "/wedd-ci/wedd-ci2.jpg",
-      hoverImage: "/wedd-ci/wedd-ci3.jpg",
+      image: "/wedd-ci/wc7.jpg",
+      hoverImage: "/wedd-ci/wedd-cin3.jfif",
       imageCount: 11
     },
       {
@@ -51,8 +51,8 @@ export default function PhotoStudioGallery() {
       description: "Professional  portraits and lifestyle shots",
       region: "Studio Sessions",
       link: "/services/portrait-shoot",
-      image: "/pot-img/pot2.jpg",
-      hoverImage: "/pot-img/pot3.jpg",
+      image: "/pot-img/port2.jpg",
+      hoverImage: "/pot-img/port.jpg",
       imageCount: 11
     },
        {
@@ -106,46 +106,8 @@ export default function PhotoStudioGallery() {
       imageCount: 11
     },
    
-    {
-      id: 11,
-      name: "Photo Framing",
-      description: "Because every picture deserves a beautiful frame.",
-      region: "Editorial Style",
-      link: "/services/photo-framing",
-      image: "https://i.pinimg.com/736x/b3/d5/40/b3d54020ed31ef0f4350f538bad781dd.jpg",
-      hoverImage: "https://i.pinimg.com/1200x/65/fc/5a/65fc5ad6182e8e5d65047346cae87328.jpg",
-      imageCount: 11
-    },
-        {
-      id: 12,
-      name: "Photo Printing",
-      description: "From digital to tangible — feel your moments again.",
-      region: "Editorial Style",
-      link: "/services/photo-printing",
-      image: "/printout-img/printout7.jpg",
-      hoverImage: "/printout-img/printout8.jpg",
-      imageCount: 11
-    },
-      {
-      id: 13,
-      name: "Visa Passport",
-      description: "High-end editorial and fashion photography",
-      region: "Editorial Style",
-      link: "/services/visa-passport",
-      image: "/visa-passport/visa6.jpg",
-      hoverImage: "/visa-passport/visa2.jpg",
-      imageCount: 11
-    },
-      {
-      id: 14,
-      name: "PVC Cards",
-      description: "Smart, sharp, and compliant — visa photos done right.",
-      region: "Editorial Style",
-      link: "/services/pvc-cards",
-      image: "/pvc-img/pvc6.jpg",
-      hoverImage: "/pvc-img/pvc7.jpg",
-      imageCount: 11
-    },
+ 
+  
     {
       id: 15,
       name: "Product Photography",
